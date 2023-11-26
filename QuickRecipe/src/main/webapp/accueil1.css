@@ -1,0 +1,374 @@
+@charset "UTF-8";
+
+/* Réinitialiser certains styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body {
+	background-image: url("Images/image3.jpg");
+	height:100vh;
+	background-size: cover;
+	background-color: rgba(255, 255, 255, 0.9);
+	background-position : center;
+	position: relative;
+	margin:0;
+	padding:0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%; /* Couvre la largeur entière */
+    height: 100%; /* Couvre la hauteur entière */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3); /* Couleur blanche semi-transparente */
+    z-index: -1; /* Place le pseudo-élément derrière le contenu du body */
+}
+
+header {
+    position: fixed;
+    width: 100%;
+   height: 90px; 
+    Z-index:14;
+}
+
+.header-content { 
+	Position:fixe;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px ;
+    background: rgba(255, 255, 255, 0.9) ; /* Couleur de fond de l'en-tête avec transparence */
+    margin-top: 0px; 
+    width: 100%; /* Largeur totale de l'en-tête */
+   
+   
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container .logo {
+	
+    height:70px; /* Ajustez selon la taille de votre logo */
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-size: 1.5em; /* Ajustez la taille du texte du titre */
+    color: #98968A; /* Couleur du titre */
+    
+}
+.nav{
+	position: relative;
+   top: 12%;
+    left: 0;
+     /* A high value to ensure it's on top of other elements */
+    width: 100%;
+    gap:50px;
+    height: auto; /* Set to auto to adjust the height based on content or set a specific height */
+    /*background-color: rgba(255, 255, 255, 0.9); / Optional: Set a semi-transparent background */
+}
+.searching{
+	 position: relative;
+    top: 13%;
+    left: 0;
+     /* A high value to ensure it's on top of other elements */
+    width: 100%;
+    gap:50px;
+    height: auto; /* Set to auto to adjust the height based on content or set a specific height */
+    /*background-color: rgba(255, 255, 255, 0.9); / Optional: Set a semi-transparent background */
+}
+
+.navigation {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+   /* margin-top:-3px;*/
+    margin-left: 70px;
+}
+.navigation::after {
+    content: ''; /* Nécessaire pour créer un pseudo-élément */
+    position: absolute; /* Position absolue par rapport à la navigation */
+    /* Aligné en bas */
+    left: 85px; /* Aligné à gauche */
+    width: 1270px; /* Largeur totale de la navigation */
+    height: 2.5px; /* Hauteur de la ligne */
+    background-color: #942E11; /* Couleur de la ligne */
+    margin-top:60px;
+}
+
+.navigation a {
+    padding: 10px 5px; /* Ajustez l'espacement autour des liens */
+    margin: 0 10px; /* Ajustez l'espace entre les liens */
+    text-decoration: none;
+    color:#333;
+     
+    font-weight: bold; /* Met le texte en gras */
+    
+    
+}
+
+.navigation a:hover {
+	background:none;
+	color: #BC8741;
+   /* border-bottom: 2px solid #BC8741;*/
+}
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* Espace entre les boutons */
+}
+
+.auth-buttons .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background-color: #F5F5F5;
+    border-radius: 20px; /* Bordure arrondie pour l'effet ovale */
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .button:hover {
+    background-color: #e7e7e7; /* Couleur de survol des boutons et des liens */
+}
+
+.search-container {
+	
+    
+     position: relative;
+    
+    
+  
+}
+
+.background-image {
+   
+    width: 1270px;  /* Largeur de l'image */
+    height: 300px; /* Hauteur de l'image */
+    display: block;/* Supprime l'espace en dessous de l'image */
+    margin-left: 90px;
+    margin-top:5px;
+  
+}
+
+.search-box {
+    position: absolute;
+    bottom: 30px; /* Distance du bas du conteneur */
+    left: 250px;
+    right: 0;
+    max-width: 1000px; /* La largeur maximale de votre barre de recherche */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc avec une légère transparence */
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc avec une légère transparence */
+    border: 1px solid #ccc; /* Bordure pour la boîte de recherche */
+    border-radius: 20px; /* Bordures arrondies */
+    
+ 
+    
+}
+
+.search-box input[type="text"] {
+   background:none;
+   outline: none;
+   font-size: 20px;
+    border:none;
+    margin-left:30px;
+    padding: 10px;
+    margin-right: 5px; /* Espacement entre l'input et le bouton */
+    width: 80%; /* Utilisez la majorité de l'espace pour l'input */
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    
+    
+    
+}
+ .search-box .search-icon {
+    font-size: 25px; /* Ajustez la taille de l'icône */
+    color: white; /* Couleur de l'icône */
+    /* autres styles */
+}
+
+.menu{
+    position: relative;
+    top: 15%;
+    left: 0;
+     /* A high value to ensure it's on top of other elements */
+    width: 100%;
+    gap:50px;
+    height: auto; /* Set to auto to adjust the height based on content or set a specific height */
+    /*background-color: rgba(255, 255, 255, 0.9); / Optional: Set a semi-transparent background */
+}
+    
+.recipe-gallery {
+flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around; /* Espacement autour des cartes */
+     /* Permet aux cartes de passer à la ligne suivante si l'écran est trop petit */
+    gap: 50px; /* Espacement entre les cartes */
+    margin-top:0px;
+    margin-left:50px;
+    margin-right:60px;
+}
+.recipe-card {
+    flex-basis: 20%;
+    box-shadow : 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour le relief */
+    border-radius: 1px; /* Coins arrondis pour le conteneur */
+    overflow: hidden; /* Cache les débordements pour maintenir les coins arrondis */
+    transition: transform 0.3s ease; /* Animation légère lorsque la carte est survolée */
+  Z-index:13;  
+}
+
+/* Classe pour l'image de la recette */
+.recipe-card img {
+     width: 250px;  /* Largeur de l'image */
+    height: 180px;
+    display: block; /* Empêche l'ajout d'espace sous l'image */
+}
+
+/* Classe pour le titre de la recette */
+.recipe-title {
+      font-weight: normal; /* Texte normal, non gras */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-left: 5px; /* Marge à gauche, ajustez selon vos besoins */
+    margin-top:5px;
+    padding: 7px; /* Espacement autour du texte */
+    background:none; /* Fond légèrement différent pour le titre */
+}
+
+/* Classe pour le bouton ou le lien "Consulter" */
+.consult-button {
+    display: block; /* Le lien prend toute la largeur du conteneur */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-left: 10px; /* Marge à gauche, ajustez selon vos besoins */
+    padding: 2px; /* Espacement autour du lien */
+    background:none; /* Couleur de fond pour le bouton, choisissez ce que vous préférez */
+    color: gray; /* Couleur du texte */
+    text-decoration: none; /* Aucun soulignement pour le lien */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Hover effect pour le bouton */
+.consult-button:hover {
+    background:none; /* Assombrir le bouton lors du survol */
+     color: #555;
+    /* Added an underline to make the hover effect more noticeable */
+    text-decoration: underline;
+}
+
+/* Animation légère pour la carte entière lors du survol */
+.recipe-card:hover {
+	 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Déplace légèrement la carte vers le haut */}
+    #secondary-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* Autres styles nécessaires pour que le second header ressemble au header principal */
+}
+
+/* Classe pour rendre le second header visible */
+.dropbtn {
+    background-color: rgb(192, 192, 192,0.5); /* Changez la couleur de fond selon votre design */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left :800px;
+    margin-top:0px
+
+}
+
+/* Conteneur du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* Contenu du menu déroulant (caché par défaut) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-left :660px;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+/* Liens à l'intérieur du menu déroulant */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    
+    display: block;
+    
+   
+}
+
+/* Changement de couleur lors du survol des éléments du menu */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Montrer le menu déroulant au survol */
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+/* Montrer les icônes de flèche vers le bas et utilisateur quand on survole le bouton du menu */
+.dropdown:hover .dropbtn {
+    background-color: rgb(128, 128, 128);
+}
+.button{
+	background:none;
+	border :none;
+	 color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight:bold;
+    display: block;
+   margin-left:14px;
+	
+}
+.btn01{
+	background:none;
+	border :none;
+	 color: rgb(0, 0, 255);
+    padding: 12px 16px;
+    
+   
+   
+ 
+}
+ .dropdown .dropdown-content .button:hover {
+	background:none;
+	color: #BC8741;
+   /* border-bottom: 2px solid #BC8741;*/
+}
+.dropdown-content a i {
+    width: 25px; /* Ajustez la largeur si nécessaire */
+    text-align: center;
+}
+
+

@@ -1,0 +1,88 @@
+
+
+    /* Ajouter à votre fichier CSS existant */
+.dropbtn {
+    background-color: rgb(192, 192, 192,0.5); /* Changez la couleur de fond selon votre design */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left :800px;
+    margin-top:0px
+
+}
+
+/* Conteneur du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* Contenu du menu déroulant (caché par défaut) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    margin-left :660px;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+/* Liens à l'intérieur du menu déroulant */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    
+    display: block;
+    
+   
+}
+
+/* Changement de couleur lors du survol des éléments du menu */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Montrer le menu déroulant au survol */
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+/* Montrer les icônes de flèche vers le bas et utilisateur quand on survole le bouton du menu */
+.dropdown:hover .dropbtn {
+    background-color: rgb(128, 128, 128);
+}
+.button{
+	background:none;
+	border :none;
+	 color: black;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight:bold;
+    display: block;
+   margin-left:14px;
+	
+}
+.btn01{
+	background:none;
+	border :none;
+	 color: rgb(0, 0, 255);
+    padding: 12px 16px;
+    
+   
+   
+ 
+}
+ .dropdown .dropdown-content .button:hover {
+	background:none;
+	color: #BC8741;
+   /* border-bottom: 2px solid #BC8741;*/
+}
+.dropdown-content a i {
+    width: 25px; /* Ajustez la largeur si nécessaire */
+    text-align: center;
+}
